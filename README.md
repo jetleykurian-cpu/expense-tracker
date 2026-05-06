@@ -1,5 +1,7 @@
 # Expense Tracker
 
+🌐 **Live demo:** https://expense-tracker-jqqx.onrender.com
+
 A full stack web application built with Python and Django.
 
 ## Features
@@ -13,6 +15,7 @@ A full stack web application built with Python and Django.
 - Python 3.13
 - Django 6.0
 - SQLite
+- Deployed on Render
 
 ## How to run locally
 ```bash
@@ -26,7 +29,11 @@ venv\Scripts\activate       # Windows
 source venv/bin/activate    # Mac/Linux
 
 # install dependencies
-pip install django
+pip install -r requirements.txt
+
+# create .env file with your secret key
+echo SECRET_KEY=your-secret-key-here > .env
+echo DEBUG=True >> .env
 
 # run migrations
 python manage.py migrate
@@ -46,3 +53,5 @@ Visit `http://127.0.0.1:8000`
 - ModelForm — forms tied directly to database models
 - Django authentication — login, logout, register
 - User-specific data filtering
+- Environment variables and secrets management
+- Production deployment with Render and Gunicorn
